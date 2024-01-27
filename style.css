@@ -49,5 +49,7 @@ a {
   margin: 0 auto;
   display: grid;
   padding: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
 }
 
