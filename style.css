@@ -7,17 +7,13 @@
 }
 
 
-:root {
-  --primary-color: #ff7613;
-  --text-color: #727171;
+html {
+  font-size: 20px;
 }
 
-html {
-  font-size: 7 px;
-}
 
 body {
-  font-family: EB Garamond;
+  font-family: 'EB Garamond';
   background-color: white;
   color: black;
 }
@@ -33,11 +29,12 @@ a {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
+  max-width: 250px;
 }
 
 .profile_image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -47,9 +44,102 @@ a {
   max-width: 1000px;
   width: 90%;
   margin: 0 auto;
-  display: grid;
-  padding: 1.5rem;
+  /* display: grid; */
+  padding: 1rem;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 1rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 7rem;
+    padding: 3rem;
+  }
+}
+
+.profile {
+  grid-column: 1 / -1;
+  margin-bottom: 0rem;
+}
+
+/* Profile */
+.profile_container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile_name {
+  margin-bottom: 0.3rem;
+}
+
+.profile_description {
+  margin-bottom: 0.3rem;
+}
+
+.download_button:hover {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .profile_container {
+    flex-direction: column;
+  }
+}
+
+hr {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  margin-bottom: 0;
+  grid-column: 1 / -1;
+  width: auto;
+}
+
+
+
+.group_1,
+.group_2 {
+  grid-row: auto; /* Reset grid-row to default */
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-rows: auto auto; /* Set two rows for the grid */
+  }
+
+  .group_1 {
+    grid-row: 3; /* Place group_1 in the first row */
+  }
+
+  .group_2 {
+    grid-row: 4; /* Place group_2 in the second row */
+  }
+
+  .group_3 {
+    grid-row: 5;
+  }
+}
+
+/* Apply styles to the table */
+table {
+  width: 65%; /* Ensure table fills its container */
+  border-spacing: 0; /* Add space between cells */
+}
+
+/* Apply styles to table headers and cells */
+th, td {
+  padding: 1.5px; /* Add space between content and cell borders */
+}
+
+.star {
+  color: rgb(247, 247, 34);
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+
 
